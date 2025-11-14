@@ -92,11 +92,11 @@ export const SKILLS_DATA: SkillCategory[] = [
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["Akka", "Spring Boot", "Play Framework", "Ktor", "React", "Node.js", "Express.js"]
+    skills: ["Spring Boot", "NestJS","Quarkus", "React", "Node.js", "Express.js", "NextJs"]
   },
   {
     title: "Databases & Caching",
-    skills: ["PostgreSQL", "MySQL", "Cassandra", "MongoDB", "Redis", "Elasticsearch"]
+    skills: ["PostgreSQL", "MySQL","DynamoDB", "MongoDB", "Redis", "Elasticsearch"]
   },
   {
     title: "Tools & Platforms",
