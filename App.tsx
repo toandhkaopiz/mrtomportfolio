@@ -1,6 +1,9 @@
 import React from 'react';
 import { Experience, Project, SkillCategory, Language } from './types';
 import { CONTACT, ABOUT, EXPERIENCE_DATA, PROJECTS_DATA, SKILLS_DATA, LANGUAGES_DATA } from './constants';
+import StarTrail from './StarTrail';
+import CursorSpotlight from './CursorSpotlight';
+import FloatingShapes from './FloatingShapes';
 
 // Reverted from function declaration to an arrow function expression for consistency and to avoid potential TypeScript inference issues.
 const Header = () => {
@@ -224,34 +227,39 @@ const App = () => {
   }, []);
 
   return (
-    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <div className="lg:flex lg:justify-between lg:gap-4">
-        <Header />
-        <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
-          <Section id="about" title="About">
-            <p className="text-sm leading-7">{ABOUT}</p>
-          </Section>
-          <Section id="experience" title="Experience">
-             <ol className="group/list">
-                {EXPERIENCE_DATA.map((exp, index) => <ExperienceCard key={index} experience={exp} />)}
-            </ol>
-          </Section>
-          <Section id="projects" title="Projects">
-            <ol className="group/list">
-                {PROJECTS_DATA.map((proj, index) => <ProjectCard key={index} project={proj} />)}
-            </ol>
-          </Section>
-           <Section id="skills" title="Skills">
-            <SkillsList categories={SKILLS_DATA} />
-          </Section>
-          <Section id="languages" title="Languages">
-            <ul>
-                {LANGUAGES_DATA.map((lang, index) => <LanguageItem key={index} language={lang} />)}
-            </ul>
-          </Section>
-        </main>
+    <>
+      <FloatingShapes />
+      <CursorSpotlight />
+      <StarTrail />
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div className="lg:flex lg:justify-between lg:gap-4">
+          <Header />
+          <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+            <Section id="about" title="About">
+              <p className="text-sm leading-7">{ABOUT}</p>
+            </Section>
+            <Section id="experience" title="Experience">
+               <ol className="group/list">
+                  {EXPERIENCE_DATA.map((exp, index) => <ExperienceCard key={index} experience={exp} />)}
+              </ol>
+            </Section>
+            <Section id="projects" title="Projects">
+              <ol className="group/list">
+                  {PROJECTS_DATA.map((proj, index) => <ProjectCard key={index} project={proj} />)}
+              </ol>
+            </Section>
+             <Section id="skills" title="Skills">
+              <SkillsList categories={SKILLS_DATA} />
+            </Section>
+            <Section id="languages" title="Languages">
+              <ul>
+                  {LANGUAGES_DATA.map((lang, index) => <LanguageItem key={index} language={lang} />)}
+              </ul>
+            </Section>
+          </main>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
