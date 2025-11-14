@@ -178,7 +178,7 @@ export const generateProfessionalCV = () => {
   }
 
   // ============ PROJECTS ============
-  addSectionHeader('Key Projects');
+  addSectionHeader('Selected Projects');
 
   for (const project of PROJECTS_DATA) {
     checkPageBreak(80);
