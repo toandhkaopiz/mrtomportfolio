@@ -1,6 +1,6 @@
 import React from 'react';
-import { Experience, Project, SkillCategory, Certification, Language } from './types';
-import { CONTACT, ABOUT, EXPERIENCE_DATA, PROJECTS_DATA, SKILLS_DATA, CERTIFICATIONS_DATA, LANGUAGES_DATA } from './constants';
+import { Experience, Project, SkillCategory, Language } from './types';
+import { CONTACT, ABOUT, EXPERIENCE_DATA, PROJECTS_DATA, SKILLS_DATA, LANGUAGES_DATA } from './constants';
 
 // Reverted from function declaration to an arrow function expression for consistency and to avoid potential TypeScript inference issues.
 const Header = () => {
@@ -16,7 +16,6 @@ const Header = () => {
             <li><a className="group flex items-center py-3" href="#experience"><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Experience</span></a></li>
             <li><a className="group flex items-center py-3" href="#projects"><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span></a></li>
             <li><a className="group flex items-center py-3" href="#skills"><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Skills</span></a></li>
-            <li><a className="group flex items-center py-3" href="#certifications"><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Certifications</span></a></li>
             <li><a className="group flex items-center py-3" href="#languages"><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Languages</span></a></li>
           </ul>
         </nav>
@@ -148,22 +147,6 @@ const SkillsList = ({ categories }: { categories: SkillCategory[] }) => {
   );
 };
 
-const CertificationCard: React.FC<{ certification: Certification }> = ({ certification }) => {
-  return (
-      <li className="mb-8">
-          <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4">
-              <div className="z-10 sm:col-span-6">
-                  <h3 className="font-medium leading-snug text-slate-200 text-base">
-                      {certification.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-slate-400">{certification.issuer}</p>
-                  <p className="mt-1 text-xs text-slate-500">{certification.date}</p>
-              </div>
-          </div>
-      </li>
-  );
-};
-
 const LanguageItem: React.FC<{ language: Language }> = ({ language }) => {
   return (
       <li className="mb-4">
@@ -260,11 +243,6 @@ const App = () => {
           </Section>
            <Section id="skills" title="Skills">
             <SkillsList categories={SKILLS_DATA} />
-          </Section>
-          <Section id="certifications" title="Certifications">
-            <ol>
-                {CERTIFICATIONS_DATA.map((cert, index) => <CertificationCard key={index} certification={cert} />)}
-            </ol>
           </Section>
           <Section id="languages" title="Languages">
             <ul>

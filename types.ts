@@ -19,11 +19,6 @@ export interface SkillCategory {
   skills: string[];
 }
 
-export interface Certification {
-  name: string;
-  issuer: string;
-  date: string;
-}
 
 export interface Language {
   name: string;

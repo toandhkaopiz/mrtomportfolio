@@ -1,9 +1,9 @@
 
-import { Experience, Project, SkillCategory, Certification, Language } from './types';
+import { Experience, Project, SkillCategory, Language } from './types';
 
 export const CONTACT = {
   name: "Douglas Tony",
-  title: "Senior Backend Engineer at Kaopiz",
+  title: "Senior Backend Engineer",
   bio: "7+ years crafting resilient backend solutions for fintech and enterprise domains. I specialize in event-driven architectures, API design, and building systems that scale. Currently leading backend initiatives and mentoring junior engineers at Kaopiz.",
   email: "toandh.dev@gmail.com",
   linkedin: "https://www.linkedin.com/in/douglas-tony-243a742a1/",
@@ -116,13 +116,6 @@ export const SKILLS_DATA: SkillCategory[] = [
   }
 ];
 
-export const CERTIFICATIONS_DATA: Certification[] = [
-  {
-    name: "AWS Certified Solutions Architect - Associate",
-    issuer: "Amazon Web Services (AWS)",
-    date: "2019"
-  }
-];
 
 export const LANGUAGES_DATA: Language[] = [
   {
