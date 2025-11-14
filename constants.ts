@@ -10,7 +10,7 @@ export const CONTACT = {
   github: "https://github.com/toandhkaopiz",
 };
 
-export const ABOUT = "As a Senior Software Developer at Kaopiz, I specialize in building high-performance backend systems using Scala, Java, and Kotlin. My approach is grounded in a deep understanding of both Object-Oriented (OOP) and Functional Programming (FP) paradigms, which I leverage to create clean, scalable, and resilient architectures. While my core strength lies in the backend, I also possess a strong background in frontend development with React and Node.js, enabling me to contribute to the full software lifecycle. My experience extends to deploying and managing applications on AWS. I am passionate about solving complex problems and mentoring others to foster technical excellence within the team.";
+export const ABOUT = "As a Senior Software Developer, I specialize in building high-performance backend systems using Scala, Java, and Kotlin. My approach is grounded in a deep understanding of both Object-Oriented (OOP) and Functional Programming (FP) paradigms, which I leverage to create clean, scalable, and resilient architectures. While my core strength lies in the backend, I also possess a strong background in frontend development with React and Node.js, enabling me to contribute to the full software lifecycle. My experience extends to deploying and managing applications on AWS. I am passionate about solving complex problems and mentoring others to foster technical excellence within the team.";
 
 export const EXPERIENCE_DATA: Experience[] = [
   {
