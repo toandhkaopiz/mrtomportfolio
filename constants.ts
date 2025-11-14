@@ -14,7 +14,7 @@ export const ABOUT = "As a Senior Software Developer, I specialize in building h
 
 export const EXPERIENCE_DATA: Experience[] = [
   {
-    role: "Team lead/Senior Software Engineer",
+    role: "Team Lead - Senior Software Engineer",
     company: "Kaopiz",
     period: "Mar 2024 - Present",
     description: [
@@ -27,7 +27,7 @@ export const EXPERIENCE_DATA: Experience[] = [
     skills: ["Kotlin", "Java", "Spring Boot", "Quarkus", "PostgreSQL", "Redis", "Docker", "JUnit", "Kotest", "Testcontainers"]
   },
   {
-    role: "Team lead/Senior Software Engineer",
+    role: "Team Lead - Senior Software Engineer",
     company: "VNEXT HOLDINGS",
     period: "Aug 2022 - Mar 2024",
     description: [
