@@ -4,6 +4,7 @@ import { CONTACT, ABOUT, EXPERIENCE_DATA, PROJECTS_DATA, SKILLS_DATA, LANGUAGES_
 import StarTrail from './StarTrail';
 import CursorSpotlight from './CursorSpotlight';
 import FloatingShapes from './FloatingShapes';
+import { generateProfessionalCV } from './pdfGenerator';
 
 // Reverted from function declaration to an arrow function expression for consistency and to avoid potential TypeScript inference issues.
 const Header = () => {
@@ -49,6 +50,28 @@ const Header = () => {
           </a>
         </li>
       </ul>
+
+      {/* Download CV Button - Dynamically generates professional PDF from portfolio data */}
+      <button
+        onClick={generateProfessionalCV}
+        className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-teal-400 to-cyan-400 px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-teal-500/30 transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl hover:shadow-teal-500/40 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-900 active:scale-95"
+        aria-label="Download CV as PDF"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5"
+          aria-hidden="true"
+        >
+          <path fillRule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clipRule="evenodd" />
+        </svg>
+        <span className="relative">
+          Download CV
+          <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-slate-900 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      </button>
     </header>
   );
 };
