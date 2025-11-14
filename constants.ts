@@ -3,7 +3,7 @@ import { Experience, Project, SkillCategory, Language } from './types';
 
 export const CONTACT = {
   name: "Douglas Tony (Mr.Tom)",
-  title: "Senior Backend Engineer",
+  title: "Senior Fullstack Engineer",
   bio: "8+ years crafting resilient backend solutions for fintech and enterprise domains. I specialize in event-driven architectures, API design, and building systems that scale. Currently leading backend initiatives and mentoring junior engineers at Kaopiz.",
   email: "toandh.dev@gmail.com",
   linkedin: "https://www.linkedin.com/in/douglas-tony-243a742a1/",
