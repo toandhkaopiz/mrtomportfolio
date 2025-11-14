@@ -14,7 +14,7 @@ export const ABOUT = "As a Senior Software Developer, I specialize in building h
 
 export const EXPERIENCE_DATA: Experience[] = [
   {
-    role: "Team Lead - Senior Software Engineer",
+    role: "Tech Lead - Senior Software Engineer",
     company: "Kaopiz",
     period: "Mar 2024 - Present",
     description: [
